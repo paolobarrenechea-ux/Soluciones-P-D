@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soluciones P&D — Catálogo Oficial 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --verde:       #1b4332;
+  --verde-med:   #2d6a4f;
+  --verde-light: #52b788;
+  --verde-pale:  #d8f3dc;
+  --oro:         #b5843a;
+  --crema:       #faf7f2;
+  --gris-100:    #f4f1ec;
+  --gris-200:    #eae6de;
+  --gris-300:    #d6d0c4;
+  --gris-500:    #8c8579;
+  --gris-700:    #3d3830;
+  --negro:       #1a1714;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--crema); color: var(--negro); overflow-x: hidden; }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh; background: var(--verde);
+  display: grid; grid-template-rows: auto 1fr auto;
+  position: relative; overflow: hidden;
+}
+.hero-ring {
+  position: absolute; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.06); pointer-events: none;
+}
+.hero-ring:nth-child(1) { width:700px;height:700px;top:-250px;right:-250px; }
+.hero-ring:nth-child(2) { width:1000px;height:1000px;top:-450px;right:-450px; }
+.hero-ring:nth-child(3) { width:340px;height:340px;bottom:40px;left:-140px;background:rgba(82,183,136,0.05);border:none; }
+.hero-top {
+  display:flex;justify-content:space-between;align-items:center;
+  padding:36px 60px; position:relative;z-index:2;
+}
+.brand { display:flex;align-items:center;gap:14px; }
+.brand-mark {
+  width:46px;height:46px;background:var(--verde-light);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:white;
+}
+.brand-name { font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:white;letter-spacing:1px; }
+.brand-sub { font-size:10px;color:rgba(255,255,255,0.45);letter-spacing:3px;text-transform:uppercase;margin-top:2px; }
+.hero-links { display:flex;gap:24px; }
+.hero-links a { color:rgba(255,255,255,0.55);font-size:13px;text-decoration:none;transition:color .2s; }
+.hero-links a:hover { color:var(--verde-light); }
+.hero-body { display:flex;align-items:center;padding:0 60px;position:relative;z-index:2; }
+.hero-text { max-width:620px; }
+.hero-eyebrow {
+  display:inline-flex;align-items:center;gap:10px;color:var(--verde-light);
+  font-size:11px;letter-spacing:4px;text-transform:uppercase;margin-bottom:28px;
+}
+.hero-eyebrow::before { content:'';display:block;width:32px;height:1px;background:var(--verde-light); }
+.hero-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(52px,7vw,96px);font-weight:300;color:white;
+  line-height:1.0;letter-spacing:-2px;margin-bottom:28px;
+}
+.hero-title strong { font-weight:700;color:var(--verde-light);font-style:italic;display:block; }
+.hero-desc { font-size:16px;color:rgba(255,255,255,0.5);line-height:1.7;max-width:420px;margin-bottom:44px; }
+.hero-cta {
+  display:inline-flex;align-items:center;gap:10px;background:var(--verde-light);
+  color:var(--verde);font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  padding:16px 32px;border-radius:100px;text-decoration:none;transition:all .25s;
+}
+.hero-cta:hover { background:white;transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.2); }
+.hero-bottom {
+  padding:32px 60px;position:relative;z-index:2;
+  display:flex;justify-content:space-between;align-items:flex-end;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.hero-stat { text-align:center; }
+.hero-stat-num { font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:700;color:white; }
+.hero-stat-label { font-size:11px;color:rgba(255,255,255,.4);letter-spacing:2px;text-transform:uppercase;margin-top:2px; }
+.hero-advisor { text-align:right;color:rgba(255,255,255,.45);font-size:13px;line-height:1.7; }
+.hero-advisor strong { color:white;display:block;font-size:15px;margin-bottom:2px; }
+
+/* ─── NAV ─── */
+.sticky-nav {
+  position:sticky;top:0;z-index:100;
+  background:rgba(27,67,50,.97);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-inner {
+  max-width:1200px;margin:0 auto;padding:0 40px;
+  display:flex;gap:2px;overflow-x:auto;
+}
+.nav-inner::-webkit-scrollbar { height:0; }
+.nav-btn {
+  background:none;border:none;color:rgba(255,255,255,.5);
+  font-family:'Inter',sans-serif;font-size:11px;font-weight:500;
+  letter-spacing:1.5px;text-transform:uppercase;
+  padding:16px 20px;cursor:pointer;white-space:nowrap;
+  border-bottom:2px solid transparent;transition:all .2s;
+}
+.nav-btn:hover,.nav-btn.active { color:var(--verde-light);border-bottom-color:var(--verde-light); }
+
+/* ─── MAIN ─── */
+.main { max-width:1200px;margin:0 auto;padding:80px 40px; }
+.section { margin-bottom:100px; }
+.full-divider {
+  height:1px;
+  background:linear-gradient(to right,transparent,var(--gris-300),transparent);
+  margin:80px 0;
+}
+
+/* ─── SECTION HEADER ─── */
+.sec-head { margin-bottom:52px; }
+.sec-tag {
+  display:inline-flex;align-items:center;gap:8px;color:var(--verde-med);
+  font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px;
+}
+.sec-tag::before { content:'';display:block;width:24px;height:2px;background:var(--verde-light); }
+.sec-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(34px,5vw,56px);font-weight:300;color:var(--verde);
+  line-height:1.05;letter-spacing:-1px;
+}
+.sec-title em { font-style:italic;font-weight:700;color:var(--verde-light); }
+.sec-divider { width:60px;height:2px;background:var(--verde-pale);margin-top:18px; }
+
+/* ─── GRID ─── */
+.grid-3 { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
+.grid-2 { display:grid;grid-template-columns:repeat(2,1fr);gap:20px; }
+.grid-4 { display:grid;grid-template-columns:repeat(4,1fr);gap:20px; }
+.mt { margin-top:20px; }
+
+/* ─── CARD ─── */
+.card {
+  background:white;border-radius:16px;overflow:hidden;
+  box-shadow:0 2px 16px rgba(0,0,0,.06);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.card:hover { transform:translateY(-5px);box-shadow:0 16px 48px rgba(27,67,50,.12); }
+
+/* KEY CHANGE: object-fit:contain + neutral bg — no stretching */
+.card-img {
+  background: radial-gradient(ellipse at center, #edeae3 0%, #e0dcd3 100%);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;position:relative;
+  padding: 20px;
+}
+.card-img img {
+  max-width:100%;max-height:100%;
+  width:auto;height:auto;
+  object-fit:contain;
+  display:block;
+  transition:transform .4s cubic-bezier(.25,.46,.45,.94);
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,.18));
+}
+.card:hover .card-img img { transform:scale(1.04) translateY(-4px); }
+
+.card-body { padding:22px 24px 26px; }
+.card-cat {
+  font-size:10px;font-weight:600;letter-spacing:3px;
+  text-transform:uppercase;color:var(--verde-light);margin-bottom:6px;
+}
+.card-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:24px;font-weight:700;color:var(--verde);
+  line-height:1.1;margin-bottom:10px;
+}
+.card-desc { font-size:13px;color:var(--gris-500);line-height:1.65;margin-bottom:14px; }
+.card-features { display:flex;flex-wrap:wrap;gap:6px; }
+.feat-pill {
+  background:var(--gris-100);color:var(--gris-700);
+  font-size:11px;padding:4px 10px;border-radius:100px;
+  border:1px solid var(--gris-200);
+}
+
+/* CARD HORIZONTAL */
+.card-h { display:grid;grid-template-columns:300px 1fr; }
+.card-h .card-img { height:auto;min-height:260px; }
+.card-h .card-name { font-size:30px; }
+
+/* CARD FEATURED (2 cols) */
+.card-feat { grid-column:span 2; }
+.card-feat .card-img { height:340px; }
+.card-feat .card-name { font-size:32px; }
+
+/* ─── FOOTER ─── */
+footer {
+  background:var(--verde);color:white;
+  padding:80px 60px 60px;
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:60px;
+  position:relative;overflow:hidden;
+}
+footer::before {
+  content:'';position:absolute;top:-100px;right:-100px;
+  width:500px;height:500px;border-radius:50%;
+  background:rgba(82,183,136,.07);pointer-events:none;
+}
+footer h3 {
+  font-family:'Cormorant Garamond',serif;
+  font-size:32px;font-weight:300;margin-bottom:16px;
+}
+footer p { font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;max-width:280px; }
+.ft-h { font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--verde-light);margin-bottom:20px; }
+.ft-item { margin-bottom:14px; }
+.ft-item span { display:block;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:1px;text-transform:uppercase;margin-bottom:3px; }
+.ft-item strong { font-size:15px;color:white;font-weight:400; }
+.ft-copy {
+  grid-column:1/-1;padding-top:40px;
+  border-top:1px solid rgba(255,255,255,.1);
+  font-size:12px;color:rgba(255,255,255,.3);
+  display:flex;justify-content:space-between;
+}
+
+@media(max-width:960px) {
+  .hero-top,.hero-body,.hero-bottom { padding:28px 24px; }
+  .hero-links { display:none; }
+  .main { padding:60px 20px; }
+  .grid-3,.grid-4 { grid-template-columns:repeat(2,1fr); }
+  .grid-2 { grid-template-columns:1fr; }
+  .card-feat { grid-column:span 1; }
+  .card-feat .card-img { height:260px; }
+  .card-h { grid-template-columns:1fr; }
+  .card-h .card-img { min-height:240px; }
+  footer { grid-template-columns:1fr;padding:48px 24px 40px;gap:40px; }
+  .ft-copy { flex-direction:column;gap:8px; }
+  .nav-inner { padding:0 20px; }
+}
+@media(max-width:580px) {
+  .grid-3,.grid-4 { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-ring"></div><div class="hero-ring"></div><div class="hero-ring"></div>
+  <div class="hero-top">
+    <div class="brand">
+      <div class="brand-mark">P</div>
+      <div><div class="brand-name">SOLUCIONES P&amp;D</div><div class="brand-sub">Seguridad y confianza</div></div>
+    </div>
+    <div class="hero-links">
+      <a href="tel:942419822">📱 942 419 822</a>
+      <a href="mailto:ventas@soagropd.com">✉ ventas@soagropd.com</a>
+    </div>
+  </div>
+  <div class="hero-body">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Catálogo 2025</div>
+      <h1 class="hero-title">Mobiliario<br>de <strong>oficina</strong></h1>
+      <p class="hero-desc">Sillas operativas, ergonómicas, gerenciales, de visita, espera y mesas multiusos. Diseño, confort y durabilidad para tu negocio.</p>
+      <a href="#catalogo" class="hero-cta">Ver catálogo completo →</a>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-stat"><div class="hero-stat-num">30+</div><div class="hero-stat-label">Modelos</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">7</div><div class="hero-stat-label">Categorías</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">150 kg</div><div class="hero-stat-label">Cap. máxima</div></div>
+    <div class="hero-advisor"><strong>Joana Arias</strong>Asesora Comercial<br>bj-ariasm@hotmail.com</div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="sticky-nav" id="catalogo">
+  <div class="nav-inner">
+    <button class="nav-btn active" onclick="goTo('operativas',this)">Operativas</button>
+    <button class="nav-btn" onclick="goTo('ergonomicas',this)">Ergonómicas</button>
+    <button class="nav-btn" onclick="goTo('gamaalta',this)">Gama Alta</button>
+    <button class="nav-btn" onclick="goTo('gerenciales',this)">Gerenciales</button>
+    <button class="nav-btn" onclick="goTo('visita',this)">Visita</button>
+    <button class="nav-btn" onclick="goTo('espera',this)">Espera</button>
+    <button class="nav-btn" onclick="goTo('mesas',this)">Mesas</button>
+  </div>
+</nav>
+
+<main class="main">
+
+<!-- ▸ OPERATIVAS -->
+<section class="section" id="operativas">
+  <div class="sec-head">
+    <div class="sec-tag">Categoría 01</div>
+    <h2 class="sec-title">Sillas <em>Operativas</em></h2>
+    <div class="sec-divider"></div>
+  </div>
+  <div class="grid-2">
+    
+      <div class="card">
+        <div class="card-img" style="height:320px">
+          <img src="TU_FOTO_AQUI.jpg" alt="Modelo LIA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Silla Operativa</div>
+          <div class="card-name">Modelo LIA</div>
+          <div class="card-desc">Malla antitranspirante con borde nylon, apoyo lumbar anatómico fijo y brazos de nylon. Mecanismo basculante con bloqueo a 90°. Base cromada de 60 cm.</div>
+          <div class="card-features"><span class="feat-pill">Malla antitranspirante</span> <span class="feat-pill">Apoyo lumbar anatómico</span> <span class="feat-pill">Mecanismo basculante 90°</span> <span class="feat-pill">Base cromada 60cm</span> <span class="feat-pill">Hasta 100 kg</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:320px">
+          <img src="TU_FOTO_AQUI.jpg" alt="Modelo MOLLY">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Silla Operativa</div>
+          <div class="card-name">Modelo MOLLY</div>
+          <div class="card-desc">Brazos en polipropileno con detalle cromado. Asiento acolchado en tela malla antitranspirante. Garruchas de nylon de alta resistencia.</div>
+          <div class="card-features"><span class="feat-pill">Brazos c/ detalle cromado</span> <span class="feat-pill">Asiento acolchado</span> <span class="feat-pill">Mecanismo basculante 90°</span> <span class="feat-pill">Base cromada 60cm</span> <span class="feat-pill">Hasta 100 kg</span></div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- ▸ ERGONÓMICAS -->
+<section class="section" id="ergonomicas">
+  <div class="sec-head">
+    <div class="sec-tag">Categoría 02</div>
+    <h2 class="sec-title">Sillas <em>Ergonómicas</em></h2>
+    <div class="sec-divider"></div>
+  </div>
+  <div class="grid-3">
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="LOW">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Ergonómica</div>
+          <div class="card-name">LOW</div>
+          <div class="card-desc">Apoyo lumbar y brazos regulables en altura. Mecanismo LAP de doble palanca. Base nylon 64cm o cromada.</div>
+          <div class="card-features"><span class="feat-pill">Lumbar regulable</span> <span class="feat-pill">Brazos regulables</span> <span class="feat-pill">LAP doble palanca</span> <span class="feat-pill">Hasta 120 kg</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="GEMINIS">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Ergonómica</div>
+          <div class="card-name">GEMINIS</div>
+          <div class="card-desc">Mecanismo syncro antishock de 3 bloqueos. Disponible con base nylon, cromada o aluminio.</div>
+          <div class="card-features"><span class="feat-pill">Syncro 3 bloqueos</span> <span class="feat-pill">Antishock</span> <span class="feat-pill">Base aluminio disp.</span> <span class="feat-pill">Hasta 120 kg</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="ARA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Ergonómica</div>
+          <div class="card-name">ARA</div>
+          <div class="card-desc">Espuma inyectada, syncro 3 bloqueos. Base cromada, nylon o aluminio. Disponible en gris y negro.</div>
+          <div class="card-features"><span class="feat-pill">Syncro 3 bloqueos</span> <span class="feat-pill">Espuma inyectada</span> <span class="feat-pill">Gris / Negro</span> <span class="feat-pill">Hasta 120 kg</span></div>
+        </div>
+      </div>
+  </div>
+  <div class="grid-3 mt">
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="LUBA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Ergonómica</div>
+          <div class="card-name">LUBA</div>
+          <div class="card-desc">Brazos regulables en altura y mecanismo syncro 3 bloqueos. Disponible en negro y gris con base nylon o aluminio.</div>
+          <div class="card-features"><span class="feat-pill">Syncro 3 bloqueos</span> <span class="feat-pill">Brazos regulables</span> <span class="feat-pill">Negro / Gris</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="MISURI">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Ergonómica</div>
+          <div class="card-name">MISURI</div>
+          <div class="card-desc">Respaldar en malla regulable en altura mediante perilla. Mecanismo LAP doble palanca. Soporta hasta 120 kg.</div>
+          <div class="card-features"><span class="feat-pill">Respaldar c/ perilla</span> <span class="feat-pill">LAP doble palanca</span> <span class="feat-pill">Hasta 120 kg</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="LOUSIANA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Ergonómica</div>
+          <div class="card-name">LOUSIANA</div>
+          <div class="card-desc">Espaldar alto con cabecera incluida. Apoyo lumbar y brazos regulables. Ideal para jornadas exigentes.</div>
+          <div class="card-features"><span class="feat-pill">Espaldar alto + cabecera</span> <span class="feat-pill">Lumbar regulable</span> <span class="feat-pill">LAP doble palanca</span> <span class="feat-pill">Hasta 120 kg</span></div>
+        </div>
+      </div>
+  </div>
+  <div class="mt">
+    
+      <div class="card card-h">
+        <div class="card-img" style="height:100%;min-height:240px">
+          <img src="TU_FOTO_AQUI.jpg" alt="TOSCANA">
+        </div>
+        <div class="card-body" style="display:flex;flex-direction:column;justify-content:center">
+          <div class="card-cat">Ergonómica · Gama Superior</div>
+          <div class="card-name">TOSCANA</div>
+          <div class="card-desc">Mecanismo Syncro con base cromada europea de 60 cm. Cabecera y apoyo lumbar regulables en altura y profundidad. Brazos ajustables en 3 ejes (altura, ángulo y profundidad).</div>
+          <div class="card-features"><span class="feat-pill">Cabecera regulable</span> <span class="feat-pill">Lumbar altura + profundidad</span> <span class="feat-pill">Brazos 3 ejes</span> <span class="feat-pill">Mecanismo SYNCRO</span> <span class="feat-pill">Base cromada europea</span> <span class="feat-pill">Hasta 120 kg</span></div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- ▸ GAMA ALTA -->
+<section class="section" id="gamaalta">
+  <div class="sec-head">
+    <div class="sec-tag">Categoría 03</div>
+    <h2 class="sec-title">Ergonómicas <em>Gama Alta</em></h2>
+    <div class="sec-divider"></div>
+  </div>
+  <div class="grid-3">
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="TOKIO">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Gama Alta</div>
+          <div class="card-name">TOKIO</div>
+          <div class="card-desc">Respaldar en fibra gruesa con carcasa de protección. Sistema slider y mecanismo Syncro. Base 5 puntas aluminio.</div>
+          <div class="card-features"><span class="feat-pill">Fibra gruesa</span> <span class="feat-pill">Sistema slider</span> <span class="feat-pill">Syncro</span> <span class="feat-pill">Base aluminio</span> <span class="feat-pill">Hasta 150 kg</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="KANSAS">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Gama Alta</div>
+          <div class="card-name">KANSAS</div>
+          <div class="card-desc">Espaldar regulable en 8 posiciones. Brazos en polipropileno inyectado regulables en altura, ángulo y profundidad.</div>
+          <div class="card-features"><span class="feat-pill">Espaldar 8 posiciones</span> <span class="feat-pill">Brazos 3 ejes</span> <span class="feat-pill">Syncro + Slider</span> <span class="feat-pill">Base aluminio</span> <span class="feat-pill">Hasta 150 kg</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="JOB">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Gama Alta</div>
+          <div class="card-name">JOB</div>
+          <div class="card-desc">Garruchas con ejes de acero y base aluminio premium. Espaldar regulable en 8 posiciones con sistema slider.</div>
+          <div class="card-features"><span class="feat-pill">Ejes de acero</span> <span class="feat-pill">Espaldar 8 posiciones</span> <span class="feat-pill">Syncro + Slider</span> <span class="feat-pill">Base aluminio</span> <span class="feat-pill">Hasta 150 kg</span></div>
+        </div>
+      </div>
+  </div>
+  <div class="grid-2 mt">
+    
+      <div class="card">
+        <div class="card-img" style="height:320px">
+          <img src="TU_FOTO_AQUI.jpg" alt="ISAIAS">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Gama Alta</div>
+          <div class="card-name">ISAIAS</div>
+          <div class="card-desc">Respaldar y asiento en fibra gruesa con carcasa de protección. La opción de mayor durabilidad de la gama alta.</div>
+          <div class="card-features"><span class="feat-pill">Respaldar + asiento fibra</span> <span class="feat-pill">Espaldar 8 posiciones</span> <span class="feat-pill">Syncro + Slider</span> <span class="feat-pill">Base aluminio</span> <span class="feat-pill">Hasta 150 kg</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:320px">
+          <img src="TU_FOTO_AQUI.jpg" alt="ATENAS">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Gama Alta · Top de línea</div>
+          <div class="card-name">ATENAS</div>
+          <div class="card-desc">El modelo más completo del catálogo. Respaldar en nylon tensada, brazos regulables en 5 posiciones (incluye lados) y mecanismo Syncro de 4 bloqueos.</div>
+          <div class="card-features"><span class="feat-pill">Nylon tensada</span> <span class="feat-pill">Brazos 5 posiciones</span> <span class="feat-pill">Syncro 4 bloqueos</span> <span class="feat-pill">Base aluminio</span> <span class="feat-pill">Hasta 150 kg</span></div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- ▸ GERENCIALES -->
+<section class="section" id="gerenciales">
+  <div class="sec-head">
+    <div class="sec-tag">Categoría 04</div>
+    <h2 class="sec-title">Sillones <em>Gerenciales</em></h2>
+    <div class="sec-divider"></div>
+  </div>
+  <div class="grid-2">
+    
+      <div class="card">
+        <div class="card-img" style="height:320px">
+          <img src="TU_FOTO_AQUI.jpg" alt="CALI">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Gerencial</div>
+          <div class="card-name">CALI</div>
+          <div class="card-desc">Tapizado en cuero sintético PU. Brazos cromados con cobertor tapizado. Imagen ejecutiva de impacto inmediato.</div>
+          <div class="card-features"><span class="feat-pill">Cuero sintético PU</span> <span class="feat-pill">Brazos cromados</span> <span class="feat-pill">Basculante 90°</span> <span class="feat-pill">Hasta 120 kg</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:320px">
+          <img src="TU_FOTO_AQUI.jpg" alt="ZEUS">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Gerencial</div>
+          <div class="card-name">ZEUS</div>
+          <div class="card-desc">Respaldar con corte ergonómico en cuerina PU premium. Garruchas de nylon de alta resistencia.</div>
+          <div class="card-features"><span class="feat-pill">Cuerina PU premium</span> <span class="feat-pill">Corte ergonómico</span> <span class="feat-pill">Basculante 90°</span> <span class="feat-pill">Hasta 120 kg</span></div>
+        </div>
+      </div>
+  </div>
+  <div class="grid-2 mt">
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="ANJO">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Gerencial</div>
+          <div class="card-name">ANJO</div>
+          <div class="card-desc">Mecanismo LAP y respaldar con corte ergonómico en cuerina PU. Alta capacidad de carga.</div>
+          <div class="card-features"><span class="feat-pill">Mecanismo LAP</span> <span class="feat-pill">Corte ergonómico</span> <span class="feat-pill">Cuerina PU</span> <span class="feat-pill">Hasta 140 kg</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="SALMO">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Gerencial</div>
+          <div class="card-name">SALMO</div>
+          <div class="card-desc">Regulación de tensión mediante perilla. Mecanismo basculante bloqueo 90°. Tapizado en cuerina premium.</div>
+          <div class="card-features"><span class="feat-pill">Tensión c/ perilla</span> <span class="feat-pill">Basculante 90°</span> <span class="feat-pill">Cuerina premium</span> <span class="feat-pill">Hasta 140 kg</span></div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- ▸ VISITA -->
+<section class="section" id="visita">
+  <div class="sec-head">
+    <div class="sec-tag">Categoría 05</div>
+    <h2 class="sec-title">Sillas de <em>Visita</em></h2>
+    <div class="sec-divider"></div>
+  </div>
+  <div class="grid-3">
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="DANNA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Visita Fija</div>
+          <div class="card-name">DANNA</div>
+          <div class="card-desc">Estructura cromada de 4 patas con tapizado en cuero sintético. Diseño limpio para salas de reuniones.</div>
+          <div class="card-features"><span class="feat-pill">4 patas cromadas</span> <span class="feat-pill">Cuero sintético</span> <span class="feat-pill">Base fija</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="SWEET">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Visita Fija</div>
+          <div class="card-name">SWEET</div>
+          <div class="card-desc">Tapizado acolchado sobre estructura cromada de 4 patas. Comodidad para reuniones prolongadas.</div>
+          <div class="card-features"><span class="feat-pill">Tapizado acolchado</span> <span class="feat-pill">4 patas cromadas</span> <span class="feat-pill">Base fija</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="SALLY">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Visita · Base Trineo</div>
+          <div class="card-name">SALLY</div>
+          <div class="card-desc">Tapizado acolchado sobre base trineo cromada. Estilo contemporáneo para oficinas modernas.</div>
+          <div class="card-features"><span class="feat-pill">Base trineo</span> <span class="feat-pill">Tapizado acolchado</span> <span class="feat-pill">Cromado</span></div>
+        </div>
+      </div>
+  </div>
+  <div class="grid-3 mt">
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="AFRODITA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Visita · Base Trineo</div>
+          <div class="card-name">AFRODITA</div>
+          <div class="card-desc">Tapizado en cuerina sobre base trineo cromada. Perfil ejecutivo para salas de reunión.</div>
+          <div class="card-features"><span class="feat-pill">Cuerina</span> <span class="feat-pill">Base trineo cromada</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="LUNA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Visita · Base Trineo</div>
+          <div class="card-name">LUNA</div>
+          <div class="card-desc">Respaldo alto acolchado en cuero sintético sobre base trineo. Aspecto gerencial.</div>
+          <div class="card-features"><span class="feat-pill">Respaldo alto</span> <span class="feat-pill">Cuero sintético</span> <span class="feat-pill">Base trineo</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="JAM">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Visita · Base Trineo</div>
+          <div class="card-name">JAM</div>
+          <div class="card-desc">Diseño lineal estilo ejecutivo sobre base trineo cromada. Acabados de primer nivel.</div>
+          <div class="card-features"><span class="feat-pill">Diseño lineal</span> <span class="feat-pill">Base trineo cromada</span></div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- ▸ ESPERA -->
+<section class="section" id="espera">
+  <div class="sec-head">
+    <div class="sec-tag">Categoría 06</div>
+    <h2 class="sec-title">Sillas de <em>Espera</em></h2>
+    <div class="sec-divider"></div>
+  </div>
+  <div class="grid-3">
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="PRINCESS">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Espera · Individual</div>
+          <div class="card-name">PRINCESS</div>
+          <div class="card-desc">Silla individual apilable con base cromada de 4 patas. Varios colores disponibles.</div>
+          <div class="card-features"><span class="feat-pill">Apilable</span> <span class="feat-pill">Varios colores</span> <span class="feat-pill">Base cromada</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="MOANA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Espera · Modular</div>
+          <div class="card-name">MOANA</div>
+          <div class="card-desc">Disponible en 1, 2, 3 y 4 cuerpos. Plástico de alta resistencia en varios colores.</div>
+          <div class="card-features"><span class="feat-pill">1–4 cuerpos</span> <span class="feat-pill">Varios colores</span> <span class="feat-pill">Plástico A/R</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="AITANA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Espera · Modular</div>
+          <div class="card-name">AITANA</div>
+          <div class="card-desc">Con paleta de escritura integrada. Disponible en varios colores y de 1 a 4 cuerpos.</div>
+          <div class="card-features"><span class="feat-pill">Paleta de escritura</span> <span class="feat-pill">1–4 cuerpos</span> <span class="feat-pill">Varios colores</span></div>
+        </div>
+      </div>
+  </div>
+  <div class="grid-3 mt">
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="VENIA Full Tapiz">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Espera · Full Tapiz</div>
+          <div class="card-name">VENIA Full Tapiz</div>
+          <div class="card-desc">Tapizado completo en cuerina negra. Estructura cromada robusta para espacios de alto tráfico.</div>
+          <div class="card-features"><span class="feat-pill">Full tapiz</span> <span class="feat-pill">Cuerina</span> <span class="feat-pill">Estructura cromada</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="CRISTAL">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Espera · Aeropuerto</div>
+          <div class="card-name">CRISTAL</div>
+          <div class="card-desc">Acabado blanco estilo aeropuerto. Diseño limpio y moderno para ambientes de alta circulación.</div>
+          <div class="card-features"><span class="feat-pill">Acabado blanco</span> <span class="feat-pill">Alta circulación</span> <span class="feat-pill">Cromado</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:260px">
+          <img src="TU_FOTO_AQUI.jpg" alt="VENIA Semi Tapiz">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Espera · Semi Tapiz</div>
+          <div class="card-name">VENIA Semi Tapiz</div>
+          <div class="card-desc">Respaldo y asiento tapizados sobre estructura metálica cromada. Confort y durabilidad.</div>
+          <div class="card-features"><span class="feat-pill">Semi tapizado</span> <span class="feat-pill">Estructura cromada</span></div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<div class="full-divider"></div>
+
+<!-- ▸ MESAS -->
+<section class="section" id="mesas">
+  <div class="sec-head">
+    <div class="sec-tag">Categoría 07</div>
+    <h2 class="sec-title">Mesas <em>Multiusos</em></h2>
+    <div class="sec-divider"></div>
+  </div>
+  <div class="grid-3">
+    
+      <div class="card">
+        <div class="card-img" style="height:320px">
+          <img src="TU_FOTO_AQUI.jpg" alt="ANTONIA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Mesa Multiusos</div>
+          <div class="card-name">ANTONIA</div>
+          <div class="card-desc">Tablero rectangular blanco lacado con patas de madera natural. Estilo escandinavo minimalista para oficinas y salas.</div>
+          <div class="card-features"><span class="feat-pill">Rectangular</span> <span class="feat-pill">Tablero blanco lacado</span> <span class="feat-pill">Patas madera natural</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:320px">
+          <img src="TU_FOTO_AQUI.jpg" alt="MACARENA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Mesa Multiusos</div>
+          <div class="card-name">MACARENA</div>
+          <div class="card-desc">Tapa de vidrio redonda sobre base de madera tipo Eames. El toque perfecto para ambientes creativos y modernos.</div>
+          <div class="card-features"><span class="feat-pill">Tapa vidrio redonda</span> <span class="feat-pill">Base madera Eames</span></div>
+        </div>
+      </div>
+    
+      <div class="card">
+        <div class="card-img" style="height:320px">
+          <img src="TU_FOTO_AQUI.jpg" alt="KIARA">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Mesa Multiusos</div>
+          <div class="card-name">KIARA</div>
+          <div class="card-desc">Tapa de vidrio redonda sobre base cromada en X. Diseño contemporáneo para salas de reuniones y recepciones.</div>
+          <div class="card-features"><span class="feat-pill">Tapa vidrio redonda</span> <span class="feat-pill">Base cromada en X</span></div>
+        </div>
+      </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <h3>Soluciones<br>P&amp;D</h3>
+    <p>Mobiliario de oficina de calidad. Seguridad y confianza para tu negocio. Entrega en Lima.</p>
+  </div>
+  <div>
+    <div class="ft-h">Contacto</div>
+    <div class="ft-item"><span>Asesora comercial</span><strong>Joana Arias</strong></div>
+    <div class="ft-item"><span>Teléfono / WhatsApp</span><strong>942 419 822</strong></div>
+    <div class="ft-item"><span>Correo</span><strong>ventas@soagropd.com</strong></div>
+    <div class="ft-item"><span>Correo alterno</span><strong>bj-ariasm@hotmail.com</strong></div>
+  </div>
+  <div>
+    <div class="ft-h">Categorías</div>
+    <div class="ft-item"><span>&nbsp;</span><strong>Sillas Operativas</strong></div>
+    <div class="ft-item"><span>&nbsp;</span><strong>Ergonómicas &amp; Gama Alta</strong></div>
+    <div class="ft-item"><span>&nbsp;</span><strong>Sillones Gerenciales</strong></div>
+    <div class="ft-item"><span>&nbsp;</span><strong>Visita, Espera &amp; Mesas</strong></div>
+  </div>
+  <div class="ft-copy">
+    <span>© 2025 Soluciones P&amp;D — Catálogo Oficial</span>
+    <span>Precios a consultar · Stock sujeto a disponibilidad</span>
+  </div>
+</footer>
+
+<script>
+function goTo(id,btn){
+  document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+const secs=document.querySelectorAll('section[id]');
+window.addEventListener('scroll',()=>{
+  let cur='';
+  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-140)cur=s.id;});
+  document.querySelectorAll('.nav-btn').forEach(b=>{
+    b.classList.remove('active');
+    if(b.getAttribute('onclick')?.includes(cur))b.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
